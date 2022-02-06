@@ -12,7 +12,7 @@ white=(255,255,255)
 red=(255,0,0)
 green=(0,255,0)
 blue=(0,0,255)
-brown=(165,42,42)
+beige=(165,42,42)
 
 bicycle_width=60
 
@@ -24,10 +24,10 @@ clock=pygame.time.Clock()
 BicycleA=pygame.image.load("bicycle1.png")
 BicycleB=pygame.image.load("bicycle2.png")
 
-def car1(x,y):
+def bicycle1(x,y):
     gameDisplay.blit(BicycleA,(x,y))
 
-def car2(x,y):
+def bicycle2(x,y):
     gameDisplay.blit(BicycleB,(x,y))
 
 def things(thingx,thingy,thingw,thingh,color):
@@ -61,7 +61,7 @@ def message_display2(text):
     time.sleep(2)
 
 def cycle(bicycle):
-    message_display('Player'+bicycle+'Crashed')
+    message_display('Player'+bicycle+'Cycle')
     
 
 def cycle3():
@@ -174,9 +174,9 @@ def game_loop():
             # print('Collide')
             cycle3()
 
-        if x>display_width-car_width or x<0:
+        if x>display_width-bicycle_width or x<0:
             cycle('1')
-        if x2>display_width-car_width or x2<0:
+        if x2>display_width-bicycle_width or x2<0:
             cycle('2')
 
         if thing_starty>display_height:
@@ -191,7 +191,7 @@ def game_loop():
 
             if ((x>thing_startx and x<thing_startx+thing_width) and (y>thing_starty and y<thing_starty+thing_height)) or ((x+bicycle_width>thing_startx and x+bicycle_width<thing_startx+thing_width) and (y>thing_starty and y<thing_starty+thing_height)):
                 # print('x crossover')
-                crash('1')
+                cycle('1')
         if y2<thing_starty+thing_height:
             # print('y2 crossover')
 
@@ -205,3 +205,4 @@ def game_loop():
 game_loop()
 pygame.quit()
 quit()
+
