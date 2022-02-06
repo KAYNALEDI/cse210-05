@@ -2,10 +2,10 @@
 Every great story seems to begin with a snake.
 
 - Nicolas Cage -
-#Overview
+Overview
 Snake is a game in which the player seeks to eat food and earn points without running into their growing body.
 
-#Rules
+Rules
 Snake is played according to the following rules.
 
 Players can move up, down, left and right by using the W, S, A and D keys.
