@@ -171,7 +171,7 @@ def game_loop():
         bicycle2(x2,y2)
 
         if ((x+bicycle_width>x2 and x<x2+bicycle_width) and (y-125<y2 and y>y2-125)):
-            # print('Collide')
+            # print('GameOver')
             cycle3()
 
         if x>display_width-bicycle_width or x<0:
